@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AsYouRun · Confidentialité</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,400;0,700;1,800&display=swap">
+<style>
+  /* Mise en page : une colonne de lecture sur le bleu de l'appli, un bandeau "En bref" en jaune carte,
+     les titres en ExtraBold Italic comme les chiffres de l'écran de course. Une seule ambiance, volontaire. */
+  :root {
+    --bleu: #263172;
+    --jaune: #E5E1A3;
+    --jaune-carte: #F9F3C0;
+    --bleu-doux: #3A4688;
+    --texte: #F9F3C0;
+    --texte-calme: #D9D5A0;
+    --display: "Source Sans 3", "Source Sans Pro", "Segoe UI", Roboto, sans-serif;
+    --corps: "Source Sans 3", "Source Sans Pro", "Segoe UI", Roboto, sans-serif;
+    color-scheme: dark;
+  }
+  html { background: var(--bleu); }
+  body {
+    background: var(--bleu);
+    color: var(--texte);
+    font-family: var(--corps);
+    font-size: 17px;
+    line-height: 1.55;
+  }
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+    padding-left: max(20px, env(safe-area-inset-left, 0px));
+    padding-right: max(20px, env(safe-area-inset-right, 0px));
+    padding-block: 48px 72px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  header { display: flex; flex-direction: column; gap: 10px; }
+  .marque {
+    font-family: var(--display);
+    font-weight: 800;
+    font-style: italic;
+    font-size: 20px;
+    color: var(--jaune);
+    letter-spacing: 0.01em;
+  }
+  h1 {
+    font-family: var(--display);
+    font-weight: 800;
+    font-style: italic;
+    font-size: clamp(36px, 8vw, 52px);
+    line-height: 1;
+    margin: 0;
+    color: var(--jaune-carte);
+    text-wrap: balance;
+  }
+  .date { color: var(--texte-calme); font-size: 15px; margin: 4px 0 0; }
+
+  .bref {
+    background: var(--jaune-carte);
+    color: var(--bleu);
+    border-radius: 28px 28px 28px 0;
+    padding: 26px 26px 22px;
+  }
+  .bref h2 { color: var(--bleu); margin-bottom: 10px; }
+  .bref ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; }
+  .bref li::marker { color: var(--bleu); }
+
+  section { display: flex; flex-direction: column; gap: 10px; }
+  h2 {
+    font-family: var(--display);
+    font-weight: 700;
+    font-size: 23px;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--jaune);
+    text-wrap: balance;
+  }
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
+  li::marker { color: var(--jaune); }
+  strong { font-weight: 700; color: var(--jaune-carte); }
+  .bref strong { color: var(--bleu); }
+
+  .vague { display: block; width: 56px; height: 14px; color: var(--jaune); }
+
+  dl { margin: 0; display: grid; gap: 14px; }
+  dl div { display: grid; gap: 2px; }
+  dt { font-weight: 700; color: var(--jaune-carte); }
+  dd { margin: 0; color: var(--texte); }
+
+  .contact {
+    border-top: 1.5px solid var(--bleu-doux);
+    padding-top: 24px;
+  }
+  .adresse {
+    font-weight: 700;
+    color: var(--jaune-carte);
+    user-select: all;
+    word-break: break-all;
+  }
+  a { color: var(--jaune-carte); text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--jaune); outline-offset: 2px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<main class="page" lang="fr">
+
+  <header>
+    <div class="marque">AsYouRun</div>
+    <h1>Politique de confidentialité</h1>
+    <p class="date">Dernière mise à jour : 29 octobre 2026</p>
+  </header>
+
+  <div class="bref">
+    <h2>En bref</h2>
+    <ul>
+      <li><strong>Tout reste sur ton téléphone.</strong> AsYouRun n'envoie aucune donnée sur Internet.</li>
+      <li>Pas de compte, pas de publicité, pas de statistiques d'utilisation, pas de traceur.</li>
+      <li>Ta position sert uniquement à mesurer ton run, et seulement pendant ton run.</li>
+      <li>Tu peux effacer tes runs à tout moment, dans Mes réglages.</li>
+    </ul>
+  </div>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Les données utilisées par l'appli</h2>
+    <dl>
+      <div>
+        <dt>Ta position (GPS)</dt>
+        <dd>Elle sert à calculer ta distance, ton allure et ton tracé. L'appli l'utilise seulement entre le moment où tu démarres un run et le moment où tu l'arrêtes. Pendant ce temps, une notification reste affichée pour te le rappeler.</dd>
+      </div>
+      <div>
+        <dt>Tes runs</dt>
+        <dd>Pour chaque run : la date, la séance que tu as écrite, la distance, la durée, l'allure moyenne et le tracé GPS. Ils sont enregistrés dans l'espace privé de l'appli sur ton téléphone. Les autres applis n'y ont pas accès.</dd>
+      </div>
+      <div>
+        <dt>Ton prénom et tes réglages</dt>
+        <dd>Le prénom est facultatif. Il sert seulement à ton coach pour t'encourager. Il est enregistré sur ton téléphone, comme tes réglages (volume, fréquence des annonces, etc.).</dd>
+      </div>
+    </dl>
+  </section>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Ce que l'appli ne fait pas</h2>
+    <ul>
+      <li>Elle ne se connecte à aucun serveur.</li>
+      <li>Elle ne demande ni compte, ni e-mail, ni numéro de téléphone.</li>
+      <li>Elle n'affiche pas de publicité et ne contient aucun outil de mesure d'audience.</li>
+      <li>Elle ne vend, ne loue et ne partage aucune donnée.</li>
+    </ul>
+  </section>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Quand des données sortent de l'appli</h2>
+    <p>Uniquement quand tu le décides :</p>
+    <ul>
+      <li><strong>Export GPX.</strong> Si tu enregistres le tracé d'un run, un fichier est créé dans le dossier Téléchargements/AsYouRun de ton téléphone. Il est alors accessible comme n'importe quel fichier.</li>
+      <li><strong>Partage.</strong> Si tu partages ton bilan, Android te laisse choisir l'appli de destination (messagerie, réseau social…). Ce que tu envoies dépend alors de cette appli et de sa propre politique.</li>
+      <li><strong>Sauvegarde Android.</strong> Si tu as activé la sauvegarde de ton téléphone dans les paramètres Google, Android peut inclure les données d'AsYouRun dans cette sauvegarde. Elle est gérée et chiffrée par Google, pas par AsYouRun. Tu peux la désactiver dans les paramètres de ton téléphone.</li>
+    </ul>
+    <p>La voix du coach utilise le moteur de synthèse vocale installé sur ton téléphone (souvent celui de Google). L'appli lui transmet seulement le texte des annonces, par exemple « 2 km. Temps : 14 minutes ».</p>
+  </section>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Les autorisations demandées</h2>
+    <dl>
+      <div>
+        <dt>Position précise</dt>
+        <dd>Pour mesurer ta distance et ton allure pendant un run.</dd>
+      </div>
+      <div>
+        <dt>Notifications</dt>
+        <dd>Pour afficher la notification de run en cours. Sans elle, Android peut arrêter le coach quand l'écran est éteint.</dd>
+      </div>
+      <div>
+        <dt>Batterie</dt>
+        <dd>Facultatif. Si tu retires les restrictions de batterie, ton téléphone ne met pas le coach en veille pendant ton run.</dd>
+      </div>
+    </dl>
+    <p>Tu peux retirer ces autorisations à tout moment dans les paramètres de ton téléphone.</p>
+  </section>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Combien de temps et comment effacer</h2>
+    <p>Tes runs restent sur ton téléphone tant que tu ne les effaces pas.</p>
+    <ul>
+      <li>Pour tout effacer : <strong>Mes réglages → Mes données → Effacer mes runs</strong>.</li>
+      <li>Si tu désinstalles l'appli, toutes ses données sont supprimées. Seuls les fichiers GPX que tu as exportés dans Téléchargements restent, puisqu'ils sont à toi.</li>
+    </ul>
+  </section>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Tes droits</h2>
+    <p>Le règlement européen sur la protection des données (RGPD) te donne le droit d'accéder à tes données, de les corriger ou de les effacer. Comme AsYouRun ne reçoit aucune donnée, le développeur ne détient rien sur toi : tout est sur ton téléphone, et tu en gardes le contrôle complet. Pour toute question, tu peux écrire à l'adresse ci-dessous.</p>
+  </section>
+
+  <section>
+    <svg class="vague" viewBox="0 0 56 14" aria-hidden="true"><path d="M2 2 Q28 22 54 2" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+    <h2>Changements</h2>
+    <p>Si une future version de l'appli change la façon dont elle utilise tes données, cette page sera mise à jour avant, avec une nouvelle date en haut.</p>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>AsYouRun est développée par Frédéric Anciaume.</p>
+    <p class="adresse">fredericanciaume@gmail.com</p>
+  </section>
+
+</main>
+
+</body>
+</html>
